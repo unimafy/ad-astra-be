@@ -1,0 +1,25 @@
+gemfile: Gemfile
+
+PreCommit:
+  RuboCop:
+    enabled: true
+    on_warn: fail
+    problem_on_unmodified_line: ignore
+    command: ['bundle', 'exec', 'rubocop']
+
+  ForbiddenBranches:
+    enabled: true
+    branch_patterns: ['master']
+
+  TrailingWhitespace:
+    enabled: true
+
+      - '**/db/structure.sql' # Ignore trailing whitespace in generated files
+
+PostCheckout:
+  ALL: # Special hook name that customizes all hooks of this type
+    quiet: true # Change all post-checkout hooks to only display output on failure
+
+  IndexTags:
+    enabled: true # Generate a tags file with `ctags` each time HEAD changes
+
