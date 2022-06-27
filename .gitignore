@@ -28,3 +28,6 @@
 
 # Simple Cov
 coverage
+
+# .env
+.env

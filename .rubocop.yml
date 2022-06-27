@@ -25,7 +25,7 @@ Metrics/MethodLength:
 
 Metrics/UnimafyMethodLength:
   CountComments: false
-  Max: 12
+  Max: 50
   CountAsOne: ['array', 'heredoc']
 
 # Rails automatically detects `inverse_of` association from 4.1 onwards. Although it
@@ -60,10 +60,10 @@ RSpec/NestedGroups:
   Max: 6
 
 RSpec/MultipleExpectations:
-  Max: 5
+  Max: 100
 
 RSpec/ExampleLength:
-  Max: 30
+  Max: 100
 
 Rails/Output:
   Enabled: false

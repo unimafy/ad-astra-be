@@ -1,0 +1,74 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/users":
+    post:
+      summary: Registers a new user
+      tags:
+        - Registration
+      parameters: [ ]
+      responses:
+        '200':
+          description: 'registers a new user '
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 1
+                  email:
+                    type: string
+                    example: leandro@lehner.org
+                  profile_attributes:
+                    type: object
+                    properties:
+                      first_name:
+                        type: string
+                        example: Aurelio
+                      last_name:
+                        type: string
+                        example: Samuel
+                      phone_number:
+                        type: integer
+                        example: 799-399-6084
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: deandre_satterfield@monahan.biz
+                password:
+                  type: string
+                  example: IcQyGw5Lf0
+                password_confirmation:
+                  type: string
+                  example: IcQyGw5Lf0
+                profile_attributes:
+                  type: object
+                  properties:
+                    first_name:
+                      type: string
+                      example: Era
+                    last_name:
+                      type: string
+                      example: Julian
+                    phone_number:
+                      type: integer
+                      example: 637.175.8053
+              required:
+                - email
+                - password
+                - password_confirmation
+servers:
+  - url: https://{defaultHost}
+    variables:
+      defaultHost:
+        default: www.example.com

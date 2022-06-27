@@ -4,7 +4,13 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.3'
+gem 'active_model_serializers'
 gem 'bootsnap', require: false
+gem 'devise', '~> 4.8'
+gem 'devise-jwt'
+gem 'http_accept_language', '~> 2.1.1'
+gem 'jwt'
+gem 'omniauth'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.3'
